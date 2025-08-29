@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TopUpZone — Top Up Game Cepat & Aman</title>
+  <meta name="description" content="Website top up game tercepat, aman, dan murah. Dukung pembayaran QRIS, Dana, OVO, GoPay, dan transfer bank." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { jakarta: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            dark: '#0b0e14',
+            soft: '#111522',
+            accent: {
+              DEFAULT: '#7c3aed',
+              50: '#f3e8ff', 100: '#e9d5ff', 200: '#d8b4fe', 300: '#c084fc',
+              400: '#a855f7', 500: '#9333ea', 600: '#7c3aed', 700: '#6d28d9',
+              800: '#5b21b6', 900: '#4c1d95'
+            }
+          },
+          boxShadow: {
+            glow: '0 0 0 3px rgba(124,58,237,.25), 0 10px 25px rgba(124,58,237,.25)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { background: #0b0e14; }
+    /* Smooth scrollbar */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-thumb { background: #2a334a; border-radius: 999px; }
+    ::-webkit-scrollbar-track { background: #0b0e14; }
+  </style>
+</head>
+<body class="font-jakarta text-slate-200">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-soft/70 bg-soft/90 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-accent-500 to-indigo-500 grid place-content-center shadow-glow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 text-white"><path d="M4 6h16v2H4V6zm2 4h12v2H6v-2zm-2 4h16v2H4v-2z"/></svg>
+        </div>
+        <span class="text-xl font-extrabold tracking-tight">TopUp<span class="text-accent-300">Zone</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#games" class="hover:text-white/90">Game</a>
+        <a href="#why" class="hover:text-white/90">Keunggulan</a>
+        <a href="#faq" class="hover:text-white/90">FAQ</a>
+        <a href="#kontak" class="hover:text-white/90">Kontak</a>
+      </nav>
+      <button id="cartButton" class="relative rounded-2xl px-4 py-2 bg-accent-600 hover:bg-accent-500 transition shadow-glow text-sm font-semibold">
+        <span>Keranjang</span>
+        <span id="cartCount" class="ml-2 text-xs bg-white/10 rounded-full px-2 py-0.5">0</span>
+      </button>
+    </div>
+  </header>  <!-- HERO -->  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 opacity-40" aria-hidden="true">
+      <div class="absolute -top-24 -left-24 h-72 w-72 rounded-full blur-3xl bg-accent-600/40"></div>
+      <div class="absolute -bottom-24 -right-24 h-72 w-72 rounded-full blur-3xl bg-indigo-600/30"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20 grid lg:grid-cols-2 items-center gap-10">
+      <div>
+        <span class="inline-block mb-3 text-xs tracking-widest uppercase text-accent-200/90">Top Up Instan • 24/7</span>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Top Up Game <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-indigo-400">cepat, aman,</span> dan harga bersahabat.</h1>
+        <p class="mt-4 text-white/70 max-w-xl">Masukkan ID game, pilih nominal, bayar via QRIS/Dompet Digital/Transfer. Diamond/credit masuk dalam hitungan detik.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#games" class="px-5 py-3 rounded-2xl bg-accent-600 hover:bg-accent-500 font-semibold shadow-glow text-center">Mulai Top Up</a>
+          <a href="#why" class="px-5 py-3 rounded-2xl bg-white/5 hover:bg-white/10 font-semibold text-white/90 text-center">Kenapa TopUpZone?</a>
+        </div>
+      </div>
+      <div class="p-5 rounded-3xl bg-gradient-to-br from-white/5 to-white/0 border border-white/5 shadow-xl">
+        <div class="grid grid-cols-3 gap-3">
+          <!-- Simple illustrated cards -->
+          <div class="rounded-2xl bg-soft/80 border border-white/5 p-4">
+            <div class="h-24 rounded-xl bg-gradient-to-br from-indigo-500/30 to-accent-500/30 grid place-content-center">
+              <span class="text-3xl">🎮</span>
+            </div>
+            <p class="mt-3 font-semibold">Ribuan Judul</p>
+            <p class="text-xs text-white/60">Game populer & niche.</p>
+          </div>
+          <div class="rounded-2xl bg-soft/80 border border-white/5 p-4">
+            <div class="h-24 rounded-xl bg-gradient-to-br from-emerald-500/30 to-cyan-500/30 grid place-content-center">
+              <span class="text-3xl">⚡</span>
+            </div>
+            <p class="mt-3 font-semibold">Pengisian Kilat</p>
+            <p class="text-xs text-white/60">Masuk dalam detik.</p>
+          </div>
+          <div class="rounded-2xl bg-soft/80 border border-white/5 p-4">
+            <div class="h-24 rounded-xl bg-gradient-to-br from-rose-500/30 to-amber-500/30 grid place-content-center">
+              <span class="text-3xl">🛡️</span>
+            </div>
+            <p class="mt-3 font-semibold">Aman Terpercaya</p>
+            <p class="text-xs text-white/60">Garansi 100%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  <!-- SEARCH & FILTER -->  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="games">
+    <div class="mb-6 flex flex-col lg:flex-row gap-3 lg:items-center lg:justify-between">
+      <h2 class="text-2xl font-bold">Pilih Game</h2>
+      <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+        <div class="relative flex-1">
+          <input id="search" type="text" class="w-full rounded-2xl bg-white/5 border border-white/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500" placeholder="Cari game (mis. Mobile Legends, FF, Valorant)..." />
+          <svg class="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"></path></svg>
+        </div>
+        <select id="genre" class="rounded-2xl bg-white/5 border border-white/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-accent-500">
+          <option value="all">Semua Genre</option>
+          <option value="moba">MOBA</option>
+          <option value="battle-royale">Battle Royale</option>
+          <option value="rpg">RPG</option>
+          <option value="fps">FPS</option>
+        </select>
+      </div>
+    </div><!-- GAME GRID -->
+<div id="gameGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+  <!-- Template cards are injected by JS below with data list -->
+</div>
+
+  </section>  <!-- WHY US -->  <section id="why" class="mt-16 border-t border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid md:grid-cols-3 gap-6">
+      <div class="rounded-3xl p-6 bg-soft/60 border border-white/5">
+        <div class="text-3xl">🚀</div>
+        <h3 class="mt-3 text-xl font-bold">Instan & Otomatis</h3>
+        <p class="text-white/70 mt-1">Sistem terintegrasi langsung ke publisher. Tanpa login, cukup ID/UID & server.</p>
+      </div>
+      <div class="rounded-3xl p-6 bg-soft/60 border border-white/5">
+        <div class="text-3xl">💳</div>
+        <h3 class="mt-3 text-xl font-bold">Banyak Metode</h3>
+        <p class="text-white/70 mt-1">QRIS, Dana, OVO, GoPay, ShopeePay, Transfer Bank (BRI/BNI/BCA/Mandiri).</p>
+      </div>
+      <div class="rounded-3xl p-6 bg-soft/60 border border-white/5">
+        <div class="text-3xl">🛡️</div>
+        <h3 class="mt-3 text-xl font-bold">Garansi 100%</h3>
+        <p class="text-white/70 mt-1">Jika gagal terisi, uang kembali. CS responsif 24/7.</p>
+      </div>
+    </div>
+  </section>  <!-- FAQ -->  <section id="faq" class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <h2 class="text-2xl font-bold mb-4">Pertanyaan yang Sering Diajukan</h2>
+    <div class="space-y-3" id="faqList"></div>
+  </section>  <!-- CONTACT / FOOTER -->  <footer id="kontak" class="mt-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2">
+          <div class="h-9 w-9 rounded-xl bg-gradient-to-br from-accent-500 to-indigo-500 grid place-content-center">
+            <span class="text-white text-lg">⚡</span>
+          </div>
+          <span class="text-lg font-extrabold">TopUp<span class="text-accent-300">Zone</span></span>
+        </div>
+        <p class="mt-3 text-white/70 text-sm">Platform top up game terlengkap. Harga bersahabat, proses instan.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Bantuan</h4>
+        <ul class="space-y-1 text-sm text-white/70">
+          <li><a class="hover:text-white" href="#faq">FAQ</a></li>
+          <li><a class="hover:text-white" href="#" onclick="openChatDemo()">Hubungi CS</a></li>
+          <li><a class="hover:text-white" href="#">Syarat & Ketentuan</a></li>
+          <li><a class="hover:text-white" href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Ikuti kami</h4>
+        <div class="flex gap-3 text-white/60">
+          <a href="#" class="hover:text-white">Instagram</a>
+          <a href="#" class="hover:text-white">TikTok</a>
+          <a href="#" class="hover:text-white">YouTube</a>
+        </div>
+        <p class="text-xs text-white/50 mt-3">© <span id="year"></span> TopUpZone. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>  <!-- CART DRAWER -->  <aside id="cartDrawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-soft border-l border-white/10 shadow-2xl translate-x-full transition-transform duration-300 z-50 flex flex-col">
+    <div class="p-4 border-b border-white/10 flex items-center justify-between">
+      <h3 class="text-lg font-bold">Keranjang</h3>
+      <button id="closeCart" class="p-2 rounded-xl hover:bg-white/10">✕</button>
+    </div>
+    <div id="cartItems" class="flex-1 overflow-y-auto divide-y divide-white/5"></div>
+    <div class="p-4 border-t border-white/10 space-y-3">
+      <div class="flex items-center justify-between text-sm">
+        <span>Subtotal</span>
+        <span id="subtotal" class="font-semibold">Rp0</span>
+      </div>
+      <div>
+        <label class="text-sm">Metode Pembayaran</label>
+        <div class="mt-2 grid grid-cols-2 gap-2 text-sm" id="paymentMethods">
+          <!-- Radio buttons injected by JS -->
+        </div>
+      </div>
+      <button id="checkout" class="w-full px-4 py-3 rounded-2xl bg-accent-600 hover:bg-accent-500 font-semibold shadow-glow">Checkout</button>
+    </div>
+  </aside>  <!-- OVERLAY -->  <div id="overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm hidden z-40"></div>  <!-- CHECKOUT MODAL -->  <div id="checkoutModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative bg-soft border border-white/10 rounded-2xl max-w-lg w-full p-6">
+      <div class="flex items-center justify-between">
+        <h3 class="text-lg font-bold">Ringkasan Pesanan</h3>
+        <button id="closeModal" class="p-2 rounded-xl hover:bg-white/10">✕</button>
+      </div>
+      <div id="summary" class="mt-4 text-sm space-y-2 max-h-64 overflow-y-auto"></div>
+      <p class="mt-4 text-xs text-white/60">Demo saja — integrasikan ke gateway pembayaran (mis. Midtrans/Xendit/Tripay) untuk produksi.</p>
+      <div class="mt-5 flex gap-2">
+        <button id="confirmOrder" class="flex-1 px-4 py-3 rounded-2xl bg-accent-600 hover:bg-accent-500 font-semibold">Konfirmasi</button>
+        <button id="cancelOrder" class="flex-1 px-4 py-3 rounded-2xl bg-white/10 hover:bg-white/20">Batal</button>
+      </div>
+    </div>
+  </div>  <script>
+    // ====== Data ======
+    const games = [
+      {
+        id: 'mlbb', name: 'Mobile Legends: Bang Bang', genre: 'moba',
+        cover: '🎯', server: ['Indonesia','SEA','Global'],
+        fields: [{key:'uid', label:'ID (UID)'},{key:'zone', label:'Server/Zone (opsional)'}],
+        denom: [
+          {label:'86 Diamonds', price: 19000},
+          {label:'172 Diamonds', price: 37000},
+          {label:'257 Diamonds', price: 56000},
+          {label:'344 Diamonds', price: 74000},
+          {label:'706 Diamonds', price: 149000}
+        ]
+      },
+      {
+        id: 'ff', name: 'Free Fire', genre: 'battle-royale',
+        cover: '🔥', server: ['Indonesia','SEA'],
+        fields: [{key:'uid', label:'Player ID'}],
+        denom: [
+          {label:'50 Diamonds', price: 9000},
+          {label:'140 Diamonds', price: 24000},
+          {label:'355 Diamonds', price: 58000},
+          {label:'720 Diamonds', price: 119000}
+        ]
+      },
+      {
+        id: 'pubgm', name: 'PUBG Mobile', genre: 'battle-royale',
+        cover: '🏆', server: ['Global'],
+        fields: [{key:'uid', label:'Player ID'}],
+        denom: [
+          {label:'60 UC', price: 15000},
+          {label:'325 UC', price: 76000},
+          {label:'660 UC', price: 142000},
+          {label:'1800 UC', price: 370000}
+        ]
+      },
+      {
+        id: 'genshin', name: 'Genshin Impact', genre: 'rpg',
+        cover: '🌌', server: ['Asia','America','Europe'],
+        fields: [{key:'uid', label:'UID'}],
+        denom: [
+          {label:'60 Genesis Crystals', price: 15000},
+          {label:'330 Genesis Crystals', price: 75000},
+          {label:'1090 Genesis Crystals', price: 239000}
+        ]
+      },
+      {
+        id: 'valorant', name: 'VALORANT', genre: 'fps',
+        cover: '💥', server: ['APAC'],
+        fields: [{key:'riot', label:'Riot ID (Name#Tag)'}],
+        denom: [
+          {label:'125 VP', price: 20000},
+          {label:'420 VP', price: 68000},
+          {label:'700 VP', price: 108000},
+          {label:'1375 VP', price: 205000}
+        ]
+      },
+      {
+        id: 'codm', name: 'Call of Duty: Mobile', genre: 'fps',
+        cover: '🎯', server: ['Global'],
+        fields: [{key:'uid', label:'UID'}],
+        denom: [
+          {label:'80 CP', price: 15000},
+          {label:'420 CP', price: 76000},
+          {label:'880 CP', price: 148000}
+        ]
+      }
+    ];
+
+    const payments = [
+      { id:'qris', label:'QRIS' },
+      { id:'dana', label:'Dana' },
+      { id:'ovo', label:'OVO' },
+      { id:'gopay', label:'GoPay' },
+      { id:'transfer', label:'Transfer Bank' }
+    ];
+
+    // ===== Util =====
+    const rupiah = n => new Intl.NumberFormat('id-ID', { style:'currency', currency:'IDR', maximumFractionDigits:0 }).format(n);
+
+    // ===== Render Game Cards =====
+    const grid = document.getElementById('gameGrid');
+    function gameCardTemplate(g){
+      return `
+      <div class="group rounded-3xl bg-soft/70 border border-white/5 overflow-hidden hover:border-accent-500/50">
+        <div class="p-5">
+          <div class="flex items-center gap-3">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-white/10 to-transparent grid place-content-center text-2xl">${g.cover}</div>
+            <div>
+              <h3 class="font-bold">${g.name}</h3>
+              <p class="text-xs text-white/50 capitalize">${g.genre.replace('-', ' ')}</p>
+            </div>
+          </div>
+          <div class="mt-4 grid sm:grid-cols-2 gap-3">
+            ${g.fields.map(f=>`
+              <div>
+                <label class="text-xs text-white/60">${f.label}</label>
+                <input data-field="${f.key}" data-game="${g.id}" class="mt-1 w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500" placeholder="Masukkan ${f.label}" />
+              </div>
+            `).join('')}
+            <div>
+              <label class="text-xs text-white/60">Server</label>
+              <select data-field="server" data-game="${g.id}" class="mt-1 w-full rounded-xl bg-white/5 border border-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent-500">
+                ${g.server.map(s=>`<option value="${s}">${s}</option>`).join('')}
+              </select>
+            </div>
+          </div>
+          <div class="mt-4">
+            <label class="text-xs text-white/60">Pilih Nominal</label>
+            <div class="mt-2 grid grid-cols-2 gap-2">
+              ${g.denom.map((d,i)=>`
+                <button data-denom="${i}" data-game="${g.id}" class="denom-btn rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-left hover:border-accent-500/60">
+                  <div class="text-sm font-semibold">${d.label}</div>
+                  <div class="text-xs text-white/60">${rupiah(d.price)}</div>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+          <div class="mt-4 flex gap-2">
+            <button data-add="${g.id}" class="flex-1 rounded-2xl bg-accent-600 hover:bg-accent-500 px-4 py-2 font-semibold shadow-glow">Tambah ke Keranjang</button>
+            <button data-info="${g.id}" class="rounded-2xl bg-white/10 hover:bg-white/20 px-4 py-2">Info</button>
+          </div>
+        </div>
+      </div>`
+    }
+
+    function renderGames(list){
+      grid.innerHTML = list.map(gameCardTemplate).join('');
+    }
+
+    // ===== Search & Filter =====
+    const search = document.getElementById('search');
+    const genre = document.getElementById('genre');
+    function applyFilter(){
+      const q = search.value.toLowerCase();
+      const g = genre.value;
+      const filtered = games.filter(x =>
+        (g === 'all' || x.genre === g) && x.name.toLowerCase().includes(q)
+      );
+      renderGames(filtered);
+      bindCardEvents();
+    }
+
+    search.addEventListener('input', applyFilter);
+    genre.addEventListener('change', applyFilter);
+
+    // ===== Cart Logic =====
+    let cart = [];
+    let selectedDenom = {}; // { gameId: denomIndex }
+
+    function bindCardEvents(){
+      document.querySelectorAll('.denom-btn').forEach(btn=>{
+        btn.addEventListener('click', (e)=>{
+          const gid = btn.dataset.game;
+          const idx = +btn.dataset.denom;
+          selectedDenom[gid] = idx;
+          // highlight selection per game
+          document.querySelectorAll(`.denom-btn[data-game="${gid}"]`).forEach(b=>b.classList.remove('ring-2','ring-accent-500','border-accent-500/60'));
+          btn.classList.add('ring-2','ring-accent-500','border-accent-500/60');
+        });
+      });
+
+      document.querySelectorAll('button[data-add]').forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          const gid = btn.dataset.add;
+          const game = games.find(x=>x.id===gid);
+          const denomIdx = selectedDenom[gid];
+          if(denomIdx === undefined){
+            alert('Pilih nominal terlebih dahulu.');
+            return;
+          }
+          const denom = game.denom[denomIdx];
+          // collect fields
+          const fields = {};
+          document.querySelectorAll(`[data-game="${gid}"][data-field]`).forEach(el=>{
+            fields[el.dataset.field] = el.value.trim();
+          });
+          if(Object.values(fields).some(v=>v==='' && !('zone' in fields && fields['zone']===''))){
+            // allow zone empty only if present
+            alert('Lengkapi ID/UID terlebih dahulu.');
+            return;
